@@ -1,6 +1,6 @@
 # Introduction to Computer Programming
 
-This repository contains course notes and resources for the **Introduction to Computer Programming**.
+This repository contains course notes and resources for **Introduction to Computer Programming**.
 
 ---
 
@@ -112,16 +112,4 @@ This course introduces fundamental concepts of computer programming using Java. 
 - Joyce Farrell. *Programming Logic & Design Comprehensive*, 9th Ed., Cengage Learning, 2018.  
 - Cay Horstmann. *Big Java Early Objects*, 7th Ed., Wiley.  
 
----
 
-## Notes
-
-- Videos, online articles, and graphic analyses accompany each module to reinforce learning.  
-- Most modules include quizzes or assignments to test understanding and practical skills.  
-- Projects provide hands-on experience with Java programming concepts.  
-
----
-
-Feel free to explore the modules and complete assignments by their due dates to successfully master Java programming fundamentals.
-
----
