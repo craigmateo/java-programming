@@ -494,7 +494,7 @@ Consider a login screen with the following logic:
 
 ---
 
-##W# Summary
+#### Summary
 
 Decision Table Testing is a systematic, visual method for identifying test scenarios based on various input combinations. It’s particularly useful when each combination of inputs produces a distinct outcome.
 
