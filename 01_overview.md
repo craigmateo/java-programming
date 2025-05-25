@@ -67,15 +67,7 @@ A **computer system** is a combination of all the components required to process
 
 ---
 
-### Diagram: The Process of a Computer System
-
-```mermaid
-flowchart LR
-    A[Input Devices<br>(Keyboard, Mouse, etc.)] --> B[Memory]
-    B --> C[CPU<br>(Processing)]
-    C --> D[Memory]
-    D --> E[Output Devices<br>(Monitor, Printer, etc.)]
-```
+![Process](images/sys_process.png)
 
 ## Understanding Simple Program Logic
 
@@ -125,17 +117,7 @@ The number-doubling process includes three instructions:
 
 ---
 
-### Program Development Cycle Diagram
-
-```mermaid
-graph TD
-    A[Understand the problem] --> B[Plan the logic]
-    B --> C[Code the program]
-    C --> D[Translate program (compile/interpreter)]
-    D --> E[Test the program]
-    E --> F[Put program into production]
-    F --> G[Maintain the program]
-    G --> B
+![DevCycle](images/dev_cycle.png)
 
 ## Understanding Programming and User Environments
 
