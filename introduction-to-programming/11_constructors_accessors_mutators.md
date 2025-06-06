@@ -90,42 +90,46 @@ Java provides three types of constructors:
    - A constructor defined with no parameters.
    - Often used to assign default values explicitly.
 
+    ```java
     class Demo
     {
-        public Demo()
-        {
+        public Demo() {
         System.out.println("This is a no argument constructor");
         }
             public static void main(String args[]) {
                                 new Demo();
         }
     }
+    ```
 
 3. **Parameterized Constructor**  
    - Takes arguments to initialize objects with specific values.
    - Allows greater flexibility and control over object initialization.
 
+    ```java
     public class Employee {
 
         int empId;
         String empName;
 
             //parameterized constructor with two parameters
-            Employee(int id, String name){
+            Employee(int id, String name) {
             this.empId = id;
             this.empName = name;
-    }
-        void info(){
-            System.out.println("Id: "+empId+" Name: "+empName);
-    }
+        }
 
-            public static void main(String args[]){
-        Employee obj1 = new Employee(10245,"Chaitanya");
-        Employee obj2 = new Employee(92232,"Negan");
-                obj1.info();
-                obj2.info();
+        void info() {
+            System.out.println("Id: "+empId+" Name: "+empName);
+        }
+
+        public static void main(String args[]) {
+            Employee obj1 = new Employee(10245,"Chaitanya");
+            Employee obj2 = new Employee(92232,"Negan");
+                    obj1.info();
+                    obj2.info();
         }
     }
+    ```
 
 ![Types](images/constructor3.png)
 
