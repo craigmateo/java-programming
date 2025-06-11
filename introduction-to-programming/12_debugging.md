@@ -65,12 +65,12 @@ Once you have placed breakpoints and are ready to debug your program, follow the
 
 - Click the **Debug** icon in the toolbar.
 
-![Debug1]](images/debug1.png)
+![Debug1](images/debug1.png)
 
 - Alternatively, right-click the class name in the Project Explorer, then select **Debug As → Java Application**.
 
-![Debug2]](images/debug2.png)
-![Debug3]](images/debug3.png)
+![Debug2](images/debug2.png)
+![Debug3](images/debug3.png)
 
 When running in debug mode:
 
@@ -80,7 +80,7 @@ When running in debug mode:
 
 To proceed through the code (e.g., enter loops), use the debugging key controls (step-into, step-over, etc.).
 
-![Debug4]](images/debug4.png)
+![Debug4](images/debug4.png)
 
 ## Stepping Commands in Eclipse Debugger
 
