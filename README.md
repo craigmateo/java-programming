@@ -3,6 +3,7 @@
 This repository contains course materials for Java programming courses:
 
 1. **Introduction to Programming** – Covers the fundamentals of programming with Java.
+3. **Mobile Graphical User Interface Programming** - Graphical user interface programming in a mobile Android environment.
 2. **Object-Oriented Programming** – Builds on foundational knowledge with a deeper focus on object-oriented design and development in Java.
 
 ---
@@ -26,6 +27,21 @@ java-programming/
 │   ├── 12_debugging.md
 │   └── 13_git.md
 │
+├── mobile-graphical-interface-prog/
+|   ├── 01_introduction/
+|   ├── 02_layouts-widgets/
+|   ├── 03_application-lifecycle/
+|   ├── 04_listviews-adapters/
+|   ├── 05_sqlite/
+|   ├── 06_asynctask-files-xml/
+|   ├── 07_fragments/
+|   ├── 08_toolbars-menus/
+|   ├── 09_navigation-drawers/
+|   ├── 10_publishing-apps/
+|   ├── 11_unit-testing/
+|   ├── 12_material-sensors/
+|   └── 13_final-project/
+|
 └── object-oriented-programming/
     ├── 01_intro_to_oop.md
     ├── 02_java_basics.md
@@ -90,7 +106,86 @@ This course introduces the core principles of computer programming using Java. T
 
 ---
 
-## 📙 Course 2: Object-Oriented Programming
+## 📘 Course 2: Mobile Graphic Interface Programming
+
+This hands-on course focuses on designing and implementing Android applications using Java. Students will work with Android Studio, explore modern Android APIs, and build interactive applications.
+
+---
+
+## 📚 Module Summary
+
+### Module 1: Introduction to Android Studio
+- Android development overview  
+- Creating your first app  
+- Understanding XML, layout files, and the manifest  
+- Introduction to Git and AVD  
+
+### Module 2: Layouts and Widgets
+- Android UI design  
+- Text, Button, ImageButton, Switch, and CheckBox  
+- Toast and Snackbar  
+- Crash handling and debugging  
+
+### Module 3: Application Lifecycle
+- Activity lifecycle  
+- Intents, Bundles, and SharedPreferences  
+- ADB and debugging tools  
+
+### Module 4: ListViews and Adapters
+- ListView, Adapter, and ViewHolder pattern  
+- Spinner, AlertDialog  
+- Custom row layouts and `getView()`  
+
+### Module 5: Android SQLite
+- Working with SQLite and Cursor  
+- Database operations  
+- `SimpleCursorAdapter`  
+
+### Module 6: AsyncTask, Files, and XML
+- Background threads using `AsyncTask`  
+- Reading XML/JSON  
+- Working with files  
+- Intro to Android Wear and TV  
+
+### Module 7: Fragments
+- Using fragments in Android apps  
+- Modular app development  
+
+### Module 8: Toolbars and Menus
+- Creating and customizing app toolbars  
+- Adding menus for user interaction  
+
+### Module 9: Navigation Drawers
+- Implementing navigation drawers  
+- Managing navigation structure  
+
+### Module 10: Publishing Android Apps
+- Preparing apps for release  
+- Play Store publishing overview  
+
+### Module 11: Unit Testing
+- Writing and running unit tests  
+- Ensuring app reliability  
+
+### Module 12: Material Sensors
+- Accessing and using device sensors  
+- Material Design considerations  
+
+### Module 13: Final Project
+- Apply all skills to develop a complete Android application  
+- Demonstrate use of layout, storage, navigation, and UI logic  
+
+---
+
+## 🛠️ Requirements
+- Android Studio  
+- Java JDK  
+- Emulator or physical Android device  
+- Git for version control  
+
+---
+
+## 📙 Course 3: Object-Oriented Programming
 
 > _Content coming soon._  
 This course builds on the introductory material and dives deeper into Java's object-oriented features such as:
