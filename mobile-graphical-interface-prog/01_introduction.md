@@ -383,3 +383,258 @@ Each translated file would have a localized version of the same string, for exam
 Using `@string/hello` instead of hardcoded text makes your app more flexible, maintainable, and internationalization-ready.
 
 ![xml variables](images/xml2.png)
+
+## 🧠 Learning Activity: Working with XML Strings
+
+### 🎯 Exercise
+
+Use the following screenshots and steps to complete this practice activity.
+
+---
+
+### Step 1: Define a String Resource
+
+Go to `res/values/strings.xml`, and create the following string:
+
+    <string name="hello">Hello world</string>
+
+---
+
+### Step 2: Reference the String in XML
+
+In `activity_main.xml`, ensure the `TextView` uses the string resource:
+
+    android:text="@string/hello"
+
+✅ The `@string/hello` reference should now appear **green**, indicating that the string resource exists and is valid.
+
+🖼️ In the **Design View**, the TextView should now display **Hello world**.
+
+---
+
+### Step 3: Modify the String Resource
+
+Go back to `strings.xml` and change:
+
+    <string name="hello">Hello world</string>
+
+to:
+
+    <string name="hello">Welcome to Android</string>
+
+🔄 Now return to `activity_main.xml`. In the **Design View**, the TextView should automatically update to display: **Welcome to Android**.
+
+---
+
+### Step 4: Save and Commit Your Work with Git
+
+Let’s save our changes using Git:
+
+1. Right-click the **top project folder**.
+2. Select **Git → Commit Directory**.
+
+📝 In the **Commit Message**, summarize what you’ve changed:
+
+- Changed `android:text` from a hardcoded string to `@string/hello` in `activity_main.xml`.
+- Added `<string name="hello">Welcome to Android</string>` in `strings.xml`.
+
+✅ Click **Commit** to save these changes locally.
+
+---
+
+This exercise helps reinforce:
+- Best practices for localization
+- XML string referencing
+- Git version tracking
+
+## GIT History
+
+- Click **Commit**.  
+  - The file name should change from blue (uncommitted changes) to black (no changes).
+
+![Git History](images/git_history.png)
+
+- Now there are 2 files with 2 commits:
+  - `activity_main.xml`
+  - `strings.xml`
+
+- To view Git history:
+  - Right-click on `strings.xml`
+  - Select **Git > Show History**
+
+- The initial version of `strings.xml` had 1 `<string>` tag.  
+- The second version had 2 `<string>` tags.  
+
+- Git history allows you to:
+  - See how files evolved over time
+  - Track who made each change
+
+## Multilingual Strings
+
+- Android uses the `values-XX-rYY` naming scheme for localization:
+  - `XX`: two-letter language code
+  - `YY`: two-letter country code
+
+- String lookup order:
+  1. `values-XX-rYY` (exact match for language and country)
+  2. `values-XX` (language only)
+  3. `values` (default)
+
+- The same rule applies to colors:
+  - Define in `colors.xml`
+  - Use `@color/color_name` to reference
+
+![](images/multi1.png)
+
+![](images/multi2.gif)
+
+### Creating a French translation
+
+1. Use **Project Files** view (not Android view)
+2. Right-click `res` folder → **New > Android Resource Directory**
+3. Set:
+   - Resource type: `values`
+   - Locale:
+     - Language: `fr`
+3. Copy `strings.xml` from `values/` into `values-fr/`
+
+### Previewing language changes
+
+- Open `activity_main.xml` in **Design view**
+- Change the preview language
+- Android Studio detects the `values-fr` folder and offers French preview
+
+### Creating a regional variant: French (Canada)
+
+1. Create a new resource folder: `values-fr-rCA`
+   - Locale: Language = `fr`, Region = `CA`
+2. Copy `strings.xml` into `values-fr-rCA`
+3. Change `"Bonjour"` to `"Bonjour Canada"` in `strings.xml` of this folder
+
+![](images/multi3.gif)
+
+![](images/multi4.png)
+
+## GIT Changes
+
+- Since the last commit:
+  - Added `strings.xml` in both `values-fr/` and `values-fr-rCA/`
+
+### Git File Status Colors
+
+- **Green**: New file added to Git but not yet committed
+- **Blue**: File previously committed, now modified
+- **Black**: No changes since last commit
+
+### Resource Naming Convention Applies To:
+
+- `colors`, `drawables`, and `styles` directories
+
+![](images/git_changes.png)
+
+Examples:
+- `colors-fr-rCH`: colors for French (fr) in Switzerland (CH)
+- `styles-es-rCU`: styles for Spanish (es) in Cuba (CU)
+
+## Android Virtual Devices (AVD)
+
+- Android Studio uses virtual machines (VMs) to emulate Android phones/tablets for debugging.
+- You can also use a real Android device by enabling **Developer Options**:
+  - Follow instructions here: [Configure on-device developer options](#)
+
+### Virtual Device Communication
+- Android Studio communicates with virtual or real devices over a **TCP network connection**.
+
+### Tips for Virtual Devices
+- Choose an **older phone model** with **less memory** to conserve host system resources.
+
+### Creating a Virtual Device
+
+1. Click **Tools → AVD Manager** (or **Device Manager**).
+
+![](images/vdevice1.png)
+
+2. Click **"Create Virtual Device"**.
+
+![](images/vdevice2.png)
+
+3. Choose a Nexus or Pixel device.
+
+![](images/vdevice3.png)
+
+4. Select **x86 images** (use **x86_64** for 64-bit processors).
+   - Recommended: **API Level 23**
+   - Click **Download** to install the Android image.
+5. Click **Finish**, then **Next**, then **Finish** again to complete setup.
+
+![](images/vdevice4.png)
+
+## Android Debugging
+
+- Press the **Debug** button in Android Studio to start debugging your app.
+- Android Studio compiles the XML, Java, and resources into a **.zip** file.
+- The .zip is transferred to the emulator or phone, then **unzipped and installed**.
+- Wait for the emulator to load — your app should appear.
+
+### Emulator Tip
+- Click the **circle icon** at the bottom of the emulator to view the Android interface.
+
+---
+
+## Android Debug Bridge (ADB)
+
+- ADB is a command-line tool included in the **Android SDK**.
+
+### ADB Default Install Paths
+- **Windows**:  
+  `C:\Users\<YourUserName>\AppData\Local\Android\sdk\platform-tools`
+- **Mac**:  
+  `~/Library/Android/sdk/platform-tools`
+
+### Useful ADB Commands (from terminal)
+
+- `adb shell`  
+  Logs into the emulator or device’s Linux shell.
+
+- `exit`  
+  Exits from the ADB shell.
+
+- `adb reboot`  
+  Reboots the connected Android device.
+
+- `adb shell am start -a android.intent.action.VIEW -d https://developer.android.com/`  
+  Opens a browser on the device to a specific URL.
+
+- `adb kill-server`  
+  Stops the ADB server.
+
+- `adb start-server`  
+  Starts the ADB server.
+
+## Change Phone Language
+
+- Click the **Apps** button at the bottom of the emulator screen.
+- Click and **hold the Settings app**, then drag it to the main screen for easy access.
+- Open the **Settings** app.
+- Search for **Language**.
+- Click on **Language** and select **Français (France)**.
+- Hit the **Debug** button in Android Studio to launch your app.
+
+---
+
+- Try changing the language to **Deutsch (Deutschland)**.
+- When running your app:
+  - It first looks for the string `hello` in `values-de-rDE` (German, Germany).
+  - If that folder does not exist, it removes the region (`rDE`) and looks in `values-de`.
+  - If that folder does not exist, it finally looks in the default `values` folder.
+
+## Order of Searching
+
+- XML variables like `@string`, `@color`, `@drawable` are resolved by searching in this order:
+  1. Language **and** region folder (e.g., `values-fr-rCA`)
+  2. Language-only folder (e.g., `values-fr`)
+  3. Default `values` folder
+
+- If the exact match isn’t found, it progressively falls back by dropping region, then language.
+
+- Example: Set language to **Français (Canada)**. Since `values-fr-rCA/strings.xml` exists, you’ll see the localized string for that region.
